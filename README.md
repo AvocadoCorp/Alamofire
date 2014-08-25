@@ -33,7 +33,7 @@ _* Scheduled to coincide with Swift 1.0 release_
 
 ## Installation
 
-_The infrastructure and best practices for distributing Swift libraries is currently being developed by the developer community during this beta period of the language and Xcode. In the meantime, you can simply add Alamofire as a git submodule, and drag the `Alamofire.swift` file into your Xcode project._
+_The infrastructure and best practices for distributing Swift libraries is currently  in flux during this beta period of the language and Xcode. In the meantime, you can simply add Alamofire as a git submodule, drag the `Alamofire.xcodeproj` file into your Xcode project, and add it as a dependency for your application target._
 
 ---
 
@@ -306,16 +306,6 @@ $ curl -i \
 	-H "Accept-Encoding: Accept-Encoding: gzip;q=1.0,compress;q=0.5" \
 	-H "Accept-Language: en;q=1.0,fr;q=0.9,de;q=0.8,zh-Hans;q=0.7,zh-Hant;q=0.6,ja;q=0.5" \
 	"http://httpbin.org/get?foo=bar"
-```
-
-### typealias
-
-```swift
-typealias AF = Alamofire
-```
-
-```swift
-AF.request(.GET, "http://httpbin.org/ip")
 ```
 
 ### More Complex Use Cases

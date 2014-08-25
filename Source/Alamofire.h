@@ -1,4 +1,4 @@
-// UploadTests.swift
+// Alamofire.h
 //
 // Copyright (c) 2014 Alamofire (http://alamofire.org)
 //
@@ -20,33 +20,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-import Foundation
-import Alamofire
-import XCTest
+#import <Foundation/Foundation.h>
 
-struct AlamofireUploadTests {
-    class UploadResponseTestCase: XCTestCase {
-        func testDownloadRequest() {
-            let URL = "http://httpbin.org/post"
-            let data = "Lorem ipsum dolor sit amet".dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)
-
-            let expectation = expectationWithDescription(URL)
-
-            Alamofire.upload(.POST, URL, data!)
-                .responseJSON {(request, response, JSON, error) in
-                    expectation.fulfill()
-
-                    XCTAssertNotNil(request, "request should not be nil")
-                    XCTAssertNotNil(response, "response should not be nil")
-
-                    XCTAssertNil(error, "error should be nil")
-
-                    println(JSON)
-                }
-
-            waitForExpectationsWithTimeout(10){ error in
-                XCTAssertNil(error, "\(error)")
-            }
-        }
-    }
-}
+FOUNDATION_EXPORT double AlamofireVersionNumber;
+FOUNDATION_EXPORT const unsigned char AlamofireVersionString[];
