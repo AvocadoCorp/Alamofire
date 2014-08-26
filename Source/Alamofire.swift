@@ -641,7 +641,7 @@ extension Manager {
 
     // MARK: File
 
-    func upload(request: NSURLRequest, file: NSURL) -> Request {
+    public func upload(request: NSURLRequest, file: NSURL) -> Request {
         return upload(.File(request, file))
     }
 
